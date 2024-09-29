@@ -1,0 +1,18 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.form p {
+    margin: 0;
+}
+
+.form input {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid black;
+}
