@@ -54,6 +54,18 @@ const contactsSlice = createSlice({
   },
 });
 
+export const selectFilteredContacts = (state) => {
+  const filter = state.filter.name;
+  const contacts = state.contact.items;
+
+  const normalizedFilter = typeof filter === 'string' ? filter.toLowerCase() : '';
+
+  return contacts.filter((contact) =>
+    contact.name.toLowerCase().includes(normalizedFilter)
+  );
+
+};
+
 export const selectContacts = (state) => state.contact.items;
 export const selectLoading = (state) => state.contact.loading;
 export const selectError = (state) => state.contact.error;
